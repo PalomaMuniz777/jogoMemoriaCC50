@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(123, 22, 206);
+}
+
+h1 {
+    color: #37e914;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 11px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #2ff108f1;
+    /* Cor de fundo com opacidade */
+    border: 1px solid rgb(61, 64, 240);
+    /* Corrigido o border: espessura, estilo e cor */
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Transições suaves */
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    background-color: blue;
+    /* Muda a cor de fundo no hover */
+    transform: scale(1.1);
+    /* Aumenta levemente o tamanho no hover */
+}
+
+
+
+.card.flipped {
+    background-color: #e74c3c;
+}
+
+.card.matched {
+    background-color: #2ecc71;
+}
